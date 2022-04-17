@@ -1,0 +1,280 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 35px;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: darkgrey;
+    color: white;
+    border-radius: 8px;
+    border: 2px white;
+    text-align: center;
+    margin: 4px 2px;
+    opacity: 0.5;
+    cursor: pointer;
+    width: 180px;
+    height: 40px;
+}
+
+.button:hover {opacity: 1}
+
+.main_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: lightgray;
+}
+
+.overview {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+    background-color: white;
+    justify-content: space-evenly;
+}
+
+.overview .tips {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+    border: 3px;
+    border-style: double;
+    border-color: darkgrey;
+    padding: 20px;
+    justify-content: space-evenly;
+    background-color: lightgoldenrodyellow;
+}
+
+.overview .tips .text {
+    flex: 1 1 auto;
+}
+
+.overview .tips .text .item_1 {
+    margin-bottom: 30px;
+}
+
+.overview .tips .text .item_2 {
+     margin-bottom: 30px;
+}
+
+.overview .tips .picture {
+    flex: 0.5 0 auto;
+}
+
+.overview .tips .picture img {
+    height: 330px;
+    width: auto;
+}
+
+.overview .posts {
+    display: block;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 5px;
+    border-style: double;
+    border-color: darkgrey;
+    flex: 1 0 auto;
+    background-color: darkgrey;
+}
+
+.overview .posts .item_1,
+.overview .posts .item_3,
+.overview .posts .item_5 {
+    padding: 10px;
+    background-color: #f0f8f8;
+}
+
+.overview .posts .item_2,
+.overview .posts .item_4,
+.overview .posts .item_6 {
+    padding: 10px;
+    background-color: lightyellow;
+}
+
+.overview .posts .item_1 img {
+    width: 100px;
+    height: auto;
+}
+
+.overview .posts .item_2 img,
+.overview .posts .item_3 img,
+.overview .posts .item_4 img,
+.overview .posts .item_5 img,
+.overview .posts .item_6 img {
+    width: 40px;
+    height: auto;
+}
+
+.overview .posts a {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.information {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 3px;
+    background-color: lightgrey;
+    justify-content: flex-start;
+    margin: 5px;
+    border: 3px;
+    border-style: double;
+    border-color: darkgrey;
+    height: 150px;
+}
+
+.information .picture img {
+    justify-content: flex-start;
+    padding: 3px;
+    margin: 0px;
+    width: 140px;
+    height: auto;
+}
+
+.information .container {
+    display: flex;
+    flex-direction: column;
+    background-color: lightyellow;
+    flex: 1 0 auto;
+}
+
+.information .container .header {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+
+.information .container .marqee {
+    overflow: hidden;
+    position: relative;
+    background-color: lightyellow;
+}
+
+.information .container .marqee::after {
+    position: absolute;
+    right:-100%;
+    content:attr(text);
+}
+
+.information .container .marqee ul {
+    background-color: lightyellow;
+    animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.information .container .marqee .item_1 {
+    justify-content: space-between;
+}
+
+.information .container .marqee .item_1 a {
+    text-align: left;
+}
+
+.information .container .marqee .item_1 a img {
+    height: 90px;
+    width: 90px;
+}
+
+.quote {
+  display: flex;
+  background-color: lightgrey;
+  justify-content: space-evenly;
+}
+
+.quote .item_1 {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  background-color: lightgrey;
+  color: black;
+  margin: 0px;
+  border: 0px;
+  padding: 10px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0px;
+  gap: 10px;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  padding: 30px;
+  height: 40px;
+  width: 700px;
+  background-color: rgb(66, 110, 255);
+  color: white;
+  border-radius: 15px;
+  gap: 70px;
+}
+
+.footer .container .text ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer .container .text .item_1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer .container .text .item_2 {
+  font-size: 15px;
+}
+
+.footer .container .action {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+
+.footer .container .action button {
+  background-color: rgb(66, 110, 255);
+  border-radius: 8px;
+  border-color: white;
+  border: 2px solid white;
+  color: white;
+  width: 180px;
+  height: 40px;
+  opacity: 1;
+}
